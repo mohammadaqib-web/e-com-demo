@@ -3,7 +3,8 @@ import Footer from "./components/Footer";
 import ProductsGrid from "./components/ProductsGrid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import './App.css'
+import "./App.css";
+import { Box } from "@mui/material";
 
 export default function App() {
   return (
@@ -13,7 +14,9 @@ export default function App() {
         <Typography variant="h4" gutterBottom>
           Men’s Collection
         </Typography>
-        <ProductsGrid />
+        <Box sx={{ ml: 0 }}>
+          <ProductsGrid />
+        </Box>
       </Container>
       <Footer />
     </>

@@ -5,22 +5,31 @@ import {
   Typography,
   CardActions,
   Button,
+  Box,
 } from "@mui/material";
 
 export default function ProductCard({ product }) {
   return (
-    <Card>
-      <CardMedia
-        component="img"
-        image={product.image}
-        alt={product.title}
-        width={"200px"}
-      />
+    <Card sx={{ width: "100%", maxWidth: 360 }}>
+      <Box sx={{ overflow: "hidden" }}>
+        <CardMedia
+          component="img"
+          image={product.image}
+          alt={product.title}
+          sx={{
+            aspectRatio: "3 / 4",
+            minWidth: { xs: "300px", md: "250px" },
+            maxWidth: { xs: "300px", md: "250px" },
+          }}
+        />
+      </Box>
+
       <CardContent>
         <Typography variant="subtitle1">{product.title}</Typography>
         <Typography color="text.secondary">{product.price}</Typography>
       </CardContent>
-      <CardActions sx={{ mt: -1, mb: 1 }}>
+
+      <CardActions sx={{ px: 2, pb: 2 }}>
         <Button variant="contained" fullWidth>
           Add to Cart
         </Button>
