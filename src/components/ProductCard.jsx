@@ -10,7 +10,7 @@ import {
 
 export default function ProductCard({ product }) {
   return (
-    <Card sx={{ width: "100%", maxWidth: 360 }}>
+    <Card sx={{ width: "100%", maxWidth: 360, mt: 1 }}>
       <Box sx={{ overflow: "hidden" }}>
         <CardMedia
           component="img"

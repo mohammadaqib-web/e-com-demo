@@ -10,6 +10,7 @@ export default function ProductsGrid() {
         container
         rowSpacing={{ xs: 3, sm: 5 }}
         columnSpacing={{ xs: 2, sm: 3 }}
+        sx={{ display: "flex", justifyContent: "center" }}
       >
         {products.map((p) => (
           <Grid
